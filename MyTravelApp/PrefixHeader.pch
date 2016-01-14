@@ -1,0 +1,64 @@
+//
+//  PrefixHeader.pch
+//  MyTravelApp
+//
+//  Created by cq on 16/1/11.
+//  Copyright © 2016年 顺苹亓. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+//屏幕大小
+#define ScreenWidth [UIScreen mainScreen].bounds.size.width
+#define ScreenHeight [UIScreen mainScreen].bounds.size.height
+
+//图片缓存
+#import "UIImageView+WebCache.h"
+
+#import "RegexKitLite.h"
+#import "RequestJSON.h"
+
+//使用到的所有的Url
+//主页的搜索
+#define kSearch @"http://www.juntu.com/index.php?m=app&c=index&a=search&keywords="
+//主页的搜索对应6个url：景点，周边游，国内游，出境游，酒店，景＋酒
+#define kScenic @"http://www.juntu.com/index.php?m=app&c=scenic_rec&a=dest&keyword="   //destList
+#define kAround @"http://www.juntu.com/index.php?m=app&c=route_rec&a=tours&tourstype=1&keyword=" //toursList
+#define kInland @"http://www.juntu.com/index.php?m=app&c=route_rec&a=tours&tourstype=2&keyword=" //toursList
+#define KForeign @"http://www.juntu.com/index.php?m=app&c=route_rec&a=tours&tourstype=3&keyword=" //toursList
+#define KHotel @"http://www.juntu.com/index.php?m=app&c=hotel_rec&keyword="  //hotelList
+#define KScenicHotel @"http://www.juntu.com/index.php?m=app&c=scenic_hotel&a=lists&keywords=" //info
+
+
+//首页出境精品游/国内错峰游、周边游、国内游、出境游点击进入页面详情
+#define kDetail @"http://www.juntu.com/index.php?m=app&c=route_rec&a=tours_show&toursid="
+#define kTime @"http://www.juntu.com/index.php?m=app&c=route_rec&a=tours_date&toursid="
+//周边游、国内游、出境游（行程介绍、费用说明、重要提示）
+#define kStrokeD @"http://s.juntu.com/index.php?m=mobile&c=tours&a=stroke_detail&id="
+#define kFeeD @"http://s.juntu.com/index.php?m=mobile&c=tours&a=fee_detail&id="
+#define kNoticeD @"http://s.juntu.com/index.php?m=mobile&c=tours&a=notice_detail&id="
+
+//景区详情
+#define kScenicShow @"http://www.juntu.com/index.php?m=app&c=scenic_rec&a=scenic_show&destid="
+
+
+//首页点击进入的列表url
+#define kScenicRecommend @"http://www.juntu.com/index.php?m=app&c=scenic_rec&a=dest_recommend"//景区列表 destList
+#define kRouteReForeign @"http://www.juntu.com/index.php?m=app&c=route_rec&a=route_recommend_list&type=foreign"//出境游列表  list
+#define kRouteReInland @"http://www.juntu.com/index.php?m=app&c=route_rec&a=route_recommend_list&type=inland"//国内游列表 list
+#define kRouteTourstype @"http://www.juntu.com/index.php?m=app&c=route_rec&a=tours&tourstype=1"//周边游列表 toursList
+#define kScenicHotelLists @"http://www.juntu.com/index.php?m=app&c=scenic_hotel&a=lists"//景加酒列表 info
+
+#define kUserImage @"userImage"
+#define kUserName @"userName"
+#define kNickName @"nickName"
+#define kCellNumber @"cellNumber"
+#define kMail @"mail"
+#define kPassword @"passWord"
+#define kUserID @"userID"
+
+#endif /* PrefixHeader_pch */
