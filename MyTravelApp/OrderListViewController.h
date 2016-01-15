@@ -10,4 +10,7 @@
 
 @interface OrderListViewController : BaseViewController
 
+@property (nonatomic,copy)NSString *orderTitle;
+@property (nonatomic,copy)NSString *order_type;
+
 @end
